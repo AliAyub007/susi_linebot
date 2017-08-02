@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-line
+  namespace: nginx-ingress-line
+spec:
+  type: LoadBalancer
+  loadBalancerIP: '35.192.222.229'
+  ports:
+  - port: 80
+    name: http
+  - port: 443
+    name: https
+  selector:
+    app: nginx-line
