@@ -7,8 +7,8 @@ var http = require('http');
 
 // create LINE SDK config from env variables
 const config = {
-    channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN||config.CHANNEL_ACCESS_TOKEN,
-    channelSecret: process.env.CHANNEL_SECRET||config.CHANNEL_SECRET,
+    channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN,
+    channelSecret: process.env.CHANNEL_SECRET,
 };
 
 setInterval(function() {
