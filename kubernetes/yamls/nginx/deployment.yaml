@@ -36,4 +36,4 @@ spec:
         args:
         - /nginx-ingress-controller
         - --default-backend-service=nginx-ingress-line/default-http-backend
-        - --nginx-line-configmap=nginx-ingress-line/nginx-line
+        - --nginx-configmap=nginx-ingress-line/nginx-line
