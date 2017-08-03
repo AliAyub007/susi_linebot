@@ -1,18 +1,18 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: nginx-line
-  namespace: nginx-ingress-line
+  name: nginx1
+  namespace: nginx-ingress1
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: nginx-line
+        app: nginx1
     spec:
       containers:
       - image: gcr.io/google_containers/nginx-ingress-controller:0.8.3
-        name: nginx-line
+        name: nginx1
         imagePullPolicy: Always
         env:
           - name: POD_NAME
@@ -35,5 +35,5 @@ spec:
         - containerPort: 443
         args:
         - /nginx-ingress-controller
-        - --default-backend-service=nginx-ingress-line/default-http-backend
-        - --nginx-configmap=nginx-ingress-line/nginx-line
+        - --default-backend-service=nginx-ingress1/default-http-backend
+        - --nginx-configmap=nginx-ingress1/nginx1
