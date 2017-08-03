@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nginx-line
-  namespace: nginx-ingress-line
+  namespace: nginx-ingress
 spec:
   type: LoadBalancer
   loadBalancerIP: '104.154.91.89'
