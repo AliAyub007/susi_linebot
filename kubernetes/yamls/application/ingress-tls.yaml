@@ -9,10 +9,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - susi-linebot.tk
-    secretName: linebot-tls
+    - susi-linebotwebhook.tk 
+    secretName: linewebhook-tls
   rules:
-  - host: susi-linebot.tk
+  - host: susi-linebotwebhook.tk 
     http:
       paths:
       - path: /
