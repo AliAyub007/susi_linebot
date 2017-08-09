@@ -12,7 +12,7 @@ spec:
     - susi-linebot.tk
     secretName: linebot-tls
   rules:
-  - host: ssusi-linebot.tk
+  - host: susi-linebot.tk
     http:
       paths:
       - path: /
