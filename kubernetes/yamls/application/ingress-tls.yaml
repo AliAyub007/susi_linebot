@@ -9,10 +9,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - susi-line.tk
-    secretName: line-susi-tls
+    - susi-linebot.tk
+    secretName: linebot-tls
   rules:
-  - host: susi-line.tk
+  - host: ssusi-linebot.tk
     http:
       paths:
       - path: /
