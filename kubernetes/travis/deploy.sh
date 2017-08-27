@@ -24,9 +24,9 @@ gcloud config set compute/zone us-central1-b
 openssl aes-256-cbc -K $encrypted_64ad57c57e0f_key -iv $encrypted_64ad57c57e0f_iv -in ./kubernetes/travis/susi-telegrambot-e467bca1e540.json.enc -out susi-telegrambot-e467bca1e540.json -d
 mkdir -p lib
 gcloud auth activate-service-account --key-file susi-telegrambot-e467bca1e540.json
-export CLOUDSDK_CONTAINER_USE_CLIENT_CERTIFICATE=True
+export GOOGLE_APPLICATION_CREDENTIALS=$(pwd)/susi-telegrambot-e467bca1e540.json
 gcloud config set project susi-telegrambot
-gcloud container clusters get-credentials bots
+gcloud container clusters get-credentials bots --zone=us-central1-b
 echo ">>> Building Docker image"
 cd kubernetes/images/generator
 docker build --build-arg COMMIT_HASH=$TRAVIS_COMMIT --build-arg BRANCH=$DEPLOY_BRANCH --build-arg REPOSITORY=$REPOSITORY --no-cache -t fossasia/susi_linebot:$TRAVIS_COMMIT .
